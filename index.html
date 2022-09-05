@@ -1,3 +1,4 @@
+	
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,9 +26,9 @@
 			#time{
 				position: absolute;
 				z-index: 100;
-				font-size: 19px;
+				font-size: 16px;
 				width: 300px;
-				margin-top: 481px;
+				margin-top: 476px;
 				margin-left: 105px;
 				font-weight: 500;
 				color: #343434;
@@ -35,7 +36,7 @@
 			#time1{
 				position: absolute;
 				z-index: 88;
-				font-size: 18px;
+				font-size: 16px;
 				width: 300px;
 				margin-top: 510px;
 				margin-left: 120px;
@@ -68,7 +69,7 @@
 			}
 		</script>
 		<script>
-		   function showTime() {
+		    function showTime() {
 		        var date = new Date();
 					
 		        // 年月日
@@ -93,14 +94,14 @@
 		        var date = new Date();
 					
 		        // 年月日
-		        var year = date.getFullYear();
-		        var month = date.getMonth() + 1;
-		        var day = date.getDate();
+		        var year = date.getFullYear().toString().padStart(2,0);
+		        var month = (date.getMonth() + 1).toString().padStart(2,0);
+		        var day = date.getDate().toString().padStart(2,0);
 					
 		        // 时分秒
-		        var hour = date.getHours();
-		        var minute = date.getMinutes();
-		        var second = date.getSeconds();
+		        var hour = date.getHours().toString().padStart(2,0);
+		        var minute = date.getMinutes().toString().padStart(2,0);
+		        var second = date.getSeconds().toString().padStart(2,0);
 					
 		        // 实时显示
 		        var element = document.getElementById('time1');
